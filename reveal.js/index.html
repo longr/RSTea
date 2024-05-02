@@ -1,34 +1,68 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <head>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>RSTea - Research Software Techniques</title>
+                <title>RSTea - Research Software Techniques</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+                <link rel="stylesheet" href="dist/reset.css">
+                <link rel="stylesheet" href="dist/reveal.css">
+                <link rel="stylesheet" href="dist/theme/black.css">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+                <!-- Theme used for syntax highlighted code -->
+                <link rel="stylesheet" href="plugin/highlight/monokai.css">
 
                 <style type="text/css">
                   .question {
                       font-style: italic;
                   }
 
-                  /* Categories */
-                  .card.testing {
-                      background-color:#d33a3a;
-                      color:#152a23;
+                  .card-back {
+                      font-size: 80%;
                   }
+
+                  /* Categories */
+                  .card.testing, .category.testing {
+                      background-color:#e8a66d;
+                      color:#000000;
+                  }
+                  .category.testing a {
+                      background-color:#f9e6d8;
+                      color:#000000;
+                  }
+
+                  .card.reproducibility, .category.reproducibility,
+                  .card.documentation, .category.documentation{
+                      background-color:#e3c47b;
+                      color:#000000;
+                  }
+
+                  .category.documentation a {
+                      background-color:#f8f0db;
+                      color:#000000;
+                  }
+
+                  .card.quality, .category.quality,
+                  .card.design, .category.design{
+                      background-color:#509d90;
+                      color:#000000;
+                  }
+                  .card.sharing, .category.sharing {
+                      background-color:#62aeca;
+                      color:#000000;
+                  }
+                  .category.sharing a {
+                      background-color:#d4ebf1;
+                      color:#000000;
+                  }
+
                 </style>
-                
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
+
+        </head>
+        <body>
+                <div class="reveal">
+                        <div class="slides" id="#rstea">
 
                           <section id="landing"
                                    data-markdown="cards/landing.md"
@@ -81,17 +115,17 @@
                               -->
                           </section>
 
-                          <section id="structure"
-                                   data-markdown="categories/structure.md"
-                                   data-separator="^#=="
-                                   data-separator-vertical="^#--"
-                                   data-separator-notes="^Note:"
-                                   data-charset="iso-8859-15">
-                            <!--
-                                Note that Windows uses `\r\n` instead of `\n` as its linefeed character.
-                                For a regex that supports all operating systems, use `\r?\n` instead of `\n`.
-                              -->
-                          </section>
+                          <!-- <section id="structure" -->
+                          <!--          data-markdown="categories/structure.md" -->
+                          <!--          data-separator="^#==" -->
+                          <!--          data-separator-vertical="^#--" -->
+                          <!--          data-separator-notes="^Note:" -->
+                          <!--          data-charset="iso-8859-15"> -->
+                          <!--   <\!-- -->
+                          <!--       Note that Windows uses `\r\n` instead of `\n` as its linefeed character. -->
+                          <!--       For a regex that supports all operating systems, use `\r?\n` instead of `\n`. -->
+                          <!--     -\-> -->
+                          <!-- </section> -->
 
                           <section id="sharing"
                                    data-markdown="categories/sharing.md"
@@ -105,17 +139,17 @@
                               -->
                           </section>
 
-                          <section id="design"
-                                   data-markdown="categories/design.md"
-                                   data-separator="^#=="
-                                   data-separator-vertical="^#--"
-                                   data-separator-notes="^Note:"
-                                   data-charset="iso-8859-15">
-                            <!--
-                                Note that Windows uses `\r\n` instead of `\n` as its linefeed character.
-                                For a regex that supports all operating systems, use `\r?\n` instead of `\n`.
-                              -->
-                          </section>
+                          <!-- <section id="design" -->
+                          <!--          data-markdown="categories/design.md" -->
+                          <!--          data-separator="^#==" -->
+                          <!--          data-separator-vertical="^#--" -->
+                          <!--          data-separator-notes="^Note:" -->
+                          <!--          data-charset="iso-8859-15"> -->
+                          <!--   <\!-- -->
+                          <!--       Note that Windows uses `\r\n` instead of `\n` as its linefeed character. -->
+                          <!--       For a regex that supports all operating systems, use `\r?\n` instead of `\n`. -->
+                          <!--     -\-> -->
+                          <!-- </section> -->
 
                           <section id="documentation"
                                    data-markdown="categories/documentation.md"
@@ -130,7 +164,7 @@
                           </section>
 
                           <!-- Cards -->
-                          
+
                           <section id="unit-testing"
                                    data-markdown="cards/unit-testing.md"
                                    data-separator="^#=="
@@ -155,23 +189,47 @@
                               -->
                           </section>
 
-			</div>
-		</div>
+                          <section id="readme"
+                                   data-markdown="cards/readme.md"
+                                   data-separator="^#=="
+                                   data-separator-vertical="^#--"
+                                   data-separator-notes="^Note:"
+                                   data-charset="iso-8859-15">
+                            <!--
+                                Note that Windows uses `\r\n` instead of `\n` as its linefeed character.
+                                For a regex that supports all operating systems, use `\r?\n` instead of `\n`.
+                                -->
+                          </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+                          <section id="version-control"
+                                   data-markdown="cards/version-control.md"
+                                   data-separator="^#=="
+                                   data-separator-vertical="^#--"
+                                   data-separator-notes="^Note:"
+                                   data-charset="iso-8859-15">
+                            <!--
+                                Note that Windows uses `\r\n` instead of `\n` as its linefeed character.
+                                For a regex that supports all operating systems, use `\r?\n` instead of `\n`.
+                              -->
+                          </section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+                        </div>
+                </div>
+
+                <script src="dist/reveal.js"></script>
+                <script src="plugin/notes/notes.js"></script>
+                <script src="plugin/markdown/markdown.js"></script>
+                <script src="plugin/highlight/highlight.js"></script>
+                <script>
+                        // More info about initialization & config:
+                        // - https://revealjs.com/initialization/
+                        // - https://revealjs.com/config/
+                        Reveal.initialize({
+                                hash: true,
+
+                                // Learn about plugins: https://revealjs.com/plugins/
+                                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+                        });
+                </script>
+        </body>
 </html>
