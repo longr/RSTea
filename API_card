@@ -1,0 +1,21 @@
+---
+title: Application Programing Interface Design Basics
+categories:
+  - design
+difficulty: 3
+source-url: https://restfulapi.net/
+---
+
+# API Design Basics
+
+APIs are tools that help different parts of software talk to each other. Good API design is important for making software that's easy to use and understand.
+
+## API Design Basics
+
+1. **Keep It Simple**: Make APIs easy to understand and use by keeping them simple and focused.
+2. **Use Clear Names**: Give endpoints easy-to-understand names so developers know what they do.
+3. **Be Flexible**: Design APIs so they can adapt to changes without causing problems for existing software.
+4. **Stay Secure**: Make sure APIs are safe by using strong security measures to protect data.
+5. **Provide Documentation**: Give clear instructions on how to use APIs so developers know what to do.
+
+For more tips on API design, visit [RESTful API Design](https://restfulapi.net/).
